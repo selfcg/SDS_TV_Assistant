@@ -1,0 +1,391 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "tv helper",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "TVHelperIntent",
+                    "slots": [
+                        {
+                            "name": "media",
+                            "type": "mediaType"
+                        },
+                        {
+                            "name": "genre",
+                            "type": "genreType",
+                            "samples": [
+                                "{I_Want} to watch {genre} {media}"
+                            ]
+                        },
+                        {
+                            "name": "rating",
+                            "type": "ratingType",
+                            "samples": [
+                                "{media} with {rating}"
+                            ]
+                        },
+                        {
+                            "name": "length",
+                            "type": "lengthType",
+                            "samples": [
+                                "{length} {media}"
+                            ]
+                        },
+                        {
+                            "name": "I_Want",
+                            "type": "IWantType"
+                        },
+                        {
+                            "name": "article",
+                            "type": "articleType"
+                        }
+                    ],
+                    "samples": [
+                        "{I_Want} to watch {article} {media}",
+                        "{I_Want} to watch {article} {genre} {media}",
+                        "{I_Want} to watch {article} {length} {media}",
+                        "give me {article} {media}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "mediaType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "tv show",
+                                "synonyms": [
+                                    "show",
+                                    "television",
+                                    "TV",
+                                    "series",
+                                    "tv series"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "movie",
+                                "synonyms": [
+                                    "film"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "genreType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "action"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "comedy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "romance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "adventure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mystery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "horror"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "scifi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "drama"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "animated",
+                                "synonyms": [
+                                    "cartoon",
+                                    "animation",
+                                    "disney",
+                                    "pixar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "superhero",
+                                "synonyms": [
+                                    "marvel",
+                                    "dc",
+                                    "comic book"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fantasy"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ratingType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "5 star",
+                                "synonyms": [
+                                    "5 stars",
+                                    "4 stars or higher"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "4 star",
+                                "synonyms": [
+                                    "4 stars",
+                                    "4 stars or higher"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "3 star",
+                                "synonyms": [
+                                    "3 stars"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "2 star",
+                                "synonyms": [
+                                    "2 stars"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "1 star"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "lengthType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "short",
+                                "synonyms": [
+                                    "under an hour",
+                                    "about an hour",
+                                    "under an hour and a half"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium",
+                                "synonyms": [
+                                    "about an hour and a half",
+                                    "under two hours"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "long",
+                                "synonyms": [
+                                    "about two hours",
+                                    "over two hours"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "articleType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "a"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "an"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IWantType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "I prefer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "let's find"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "we would like"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "how about"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I want"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "I like"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog":
+        {
+            "intents":
+            [{
+                "name": "TVHelperIntent",
+                "confirmationRequired": false,
+                "prompts": {},
+                "slots":
+                [
+                    {
+                        "name": "media",
+                        "type": "mediaType",
+                        "confirmationRequired": false,
+                        "elicitationRequired": false,
+                        "prompts": {}
+                    },
+                    {
+                        "name": "genre",
+                        "type": "genreType",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {"elicitation": "Elicit.Intent-TVHelperIntent.IntentSlot-genre"}
+                    },
+                    {
+                        "name": "rating",
+                        "type": "ratingType",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {"elicitation": "Elicit.Intent-TVHelperIntent.IntentSlot-rating"}
+                    },
+                    {
+                        "name": "length",
+                        "type": "lengthType",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {"elicitation": "Elicit.Intent-TVHelperIntent.IntentSlot-length"}
+                    },
+                    {
+                        "name": "article",
+                        "type": "articleType",
+                        "confirmationRequired": false,
+                        "elicitationRequired": false,
+                        "prompts": {}
+                    },
+                    {
+                        "name": "I_Want",
+                        "type": "IWantType",
+                        "confirmationRequired": false,
+                        "elicitationRequired": false,
+                        "prompts": {}
+                    }
+                ]
+            }]
+        },
+        "prompts":
+        [
+            {
+                "id": "Elicit.Intent-TVHelperIntent.IntentSlot-genre",
+                "variations":
+                [
+                    {
+                        "type": "PlainText",
+                        "value": "What genre are you looking for? For example, you could say romance, or comedy."
+                    }
+                ]
+            },
+            {
+                "id":"Elicit.Intent-TVHelperIntent.IntentSlot-rating",
+                "variations":
+                [
+                    {
+                        "type": "PlainText",
+                        "value": "What ratings do you prefer? For example, you could say above three stars, or between two and four stars."
+                    }
+                ]
+            },
+            {
+                "id":"Elicit.Intent-TVHelperIntent.IntentSlot-length",
+                "variations": 
+                [
+                    {
+                        "type": "PlainText",
+                        "value": "How long do you want this to last? For example, you could say about an hour, or under two hours."
+                    }
+                ]
+            }
+        ]
+    }
+}
